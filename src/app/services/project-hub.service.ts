@@ -28,7 +28,7 @@ export class ProjectHubService {
     return this.http.get<GetAllProjects[]>(this.baseUrl + "GetAllProjects", { headers: this.Header });
   }
 
-  public getProjectById(id: number): Observable<GetAllProjects> {
+  public getProjectById(id: any): Observable<GetAllProjects> {
     return this.http.get<GetAllProjects>(this.baseUrl  + id, { headers: this.Header });
   }
 }
