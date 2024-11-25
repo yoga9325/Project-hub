@@ -1,0 +1,39 @@
+<div class="card">
+    <p-table [value]="getAllUsers" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Project Name</th>
+                <th>Create Date</th>
+            </tr>
+        </ng-template>
+       
+        <ng-template pTemplate="body"  let-getAllUsers>
+            
+            <tr>
+                <td>{{getAllUsers.userId}}</td>
+                <td>{{getAllUsers.fullName}}</td>
+                <td>{{getAllUsers.emailId}}</td>
+                <td>{{getAllUsers.role}}</td>
+                <td>{{getAllUsers.createdDate}}</td>
+                <td>{{getAllUsers.createdDate}}</td>
+            </tr>
+          
+        </ng-template>
+    
+    </p-table>
+</div>
+
+<!-- userId: number
+    userName: string
+    emailId: string
+    fullName: string
+    role: string
+    createdDate: string
+    password: string
+    projectName: string
+    refreshToken?: string
+    refreshTokenExpiryTime: string -->

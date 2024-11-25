@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>submissionId</th>
+                        <th>studentName</th>
+                        <th>contactNo</th>
+                        <th>emailId</th>
+                        <th>status</th>
+                        <th>projectTitle</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let project of projects">
+                        <td>{{project.submissionId}}</td>
+                        <td>{{project.studentName}}</td>
+                        <td>{{project.contactNo}}</td>
+                        <td>{{project.emailId}}</td>
+                        <td>{{project.status}}</td>
+                        <td>{{project.projectTitle}}</td>
+                        <td><button class="btn btn-primary" (click)="toggleView(project.submissionId)">More Details</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- submissionId: number
+    studentName: string
+    contactNo: string
+    emailId: string
+    status: string
+    projectTitle: string
+    startDate: string
+    endDate: string
+    department: string
+    course: string
+    technologies: string
+    isGroupProject: boolean
+    groupMembers: string
+    isSynopsisSubmitted: boolean
+    dateOfSubmission: string
+    projectDescription: string
+    gitHubUrl: string
+    userId: number -->
